@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iot_app/common/constants/app_color.dart';
+import 'package:iot_app/common/widgets/app_background.dart';
 import 'package:iot_app/common/widgets/app_logo.dart';
 import 'package:iot_app/screens/main/main_screen.dart';
 import 'package:iot_app/util/hooks/setup_state_hooks.dart';
@@ -18,23 +18,12 @@ class SplashScreen extends HookWidget {
     final navigator = context.navigator;
 
     useAsyncEffectAfterSetup(() async {
-        navigator.pushReplacementNamed(MainScreen.route);
-    },[]);
+      navigator.pushReplacementNamed(MainScreen.route);
+    }, []);
 
     return Scaffold(
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.background,
-              AppColors.backgroundDarker,
-            ],
-          ),
-        ),
+        decoration: appBackground(),
         child: const AppLogo(),
       ),
     );

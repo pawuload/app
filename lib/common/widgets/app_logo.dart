@@ -8,31 +8,27 @@ class AppLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     const poweredBy = 'powered by ';
     const utopia = 'utopia.';
-    return Align(
-      alignment: Alignment.center,
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              poweredBy,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontFamily: 'Axiforma-ThinItalic',
-              ),
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            poweredBy,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 12,
+              fontFamily: 'Axiforma-ThinItalic',
             ),
-            Text(
-              utopia,
-              style: GoogleFonts.ubuntu(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
-              ),
+          ),
+          Text(
+            utopia,
+            style: GoogleFonts.ubuntu(
+              color: Colors.white,
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

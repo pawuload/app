@@ -9,7 +9,6 @@ import 'package:utopia_arch/utopia_arch.dart';
 import 'package:utopia_hooks/utopia_hooks.dart';
 import 'package:utopia_utils/utopia_utils.dart';
 
-
 class App extends HookWidget {
   const App({Key? key}) : super(key: key);
 
